@@ -1,2 +1,0 @@
-# ChromeExtension
-Testing testing
