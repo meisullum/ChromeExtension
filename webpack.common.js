@@ -1,6 +1,7 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 // will go into my test tsx file and webpack will start looking for dependencies
 
@@ -9,8 +10,8 @@ const HtmlPlugin = require('html-webpack-plugin');
 
 //chunk is single html file populated by webpack
 module.exports = {
-    mode: 'development',
-    devtool: 'cheap-module-source-map',
+    // mode: 'development',
+    // devtool: 'cheap-module-source-map',
     entry: {
         popup: path.resolve('src/popup/popup.tsx'),
         options: path.resolve('src/options/options.tsx'),
@@ -35,6 +36,9 @@ module.exports = {
         ],
     },
     plugins: [
+        new CleanWebpackPlugin({
+            cleanStaleWebpackAssets: false,
+        }),
         new CopyPlugin({
             patterns: [
                 {
