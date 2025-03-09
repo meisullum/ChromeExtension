@@ -1,11 +1,12 @@
 import React from 'react'
 // import ReactDOM from 'react-dom'
 import { createRoot } from 'react-dom/client'
-import './popup.css'
+import './options.css'
 
-const text = <p>Hello world, My name is Mei</p>
+const text = <img src='icon.png' />
 
 const container = document.createElement('div')
 document.body.appendChild(container)
 const root = createRoot(container)
 root.render(text)
+
