@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "jsx": "react",
+        "module":"es6",
+        "target": "es6",
+        "moduleResolution": "node",
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*.ts", "src/**/*.tsx"],
+    // sometimes node modules in TS so don't wanna compile that vv
+    "exclude": ["node_modules"],
+}
