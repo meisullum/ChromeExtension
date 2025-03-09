@@ -1,0 +1,1 @@
+{"version":3,"file":"contentScript.js","mappings":";;;;AAAA;AACA","sources":["webpack:///./src/contentScript/contentScript.ts"],"sourcesContent":["console.log(\"content script !\");\nchrome.runtime.sendMessage(\"from the content script\", (response) => console.log(response));\n"],"names":[],"sourceRoot":""}
